@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B17CF051B8B039700E514BF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B17CF041B8B039700E514BF /* libsqlite3.dylib */; };
+		9B17CF0B1B8B0B9800E514BF /* DataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B17CF081B8B0B9800E514BF /* DataOperation.m */; };
+		9B17CF0C1B8B0B9800E514BF /* DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B17CF0A1B8B0B9800E514BF /* DataStore.m */; };
 		9BCE0DC21B8729BF0034E265 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE0DC11B8729BF0034E265 /* main.m */; };
 		9BCE0DC51B8729BF0034E265 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE0DC41B8729BF0034E265 /* AppDelegate.m */; };
 		9BCE0DC81B8729BF0034E265 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE0DC71B8729BF0034E265 /* ViewController.m */; };
@@ -14,6 +17,7 @@
 		9BCE0DCD1B8729BF0034E265 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BCE0DCC1B8729BF0034E265 /* Images.xcassets */; };
 		9BCE0DD01B8729BF0034E265 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BCE0DCE1B8729BF0034E265 /* LaunchScreen.xib */; };
 		9BCE0DDC1B8729C00034E265 /* WebServiceExTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE0DDB1B8729C00034E265 /* WebServiceExTests.m */; };
+		9BCE0DE81B872A050034E265 /* ServerHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE0DE71B872A050034E265 /* ServerHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B17CF041B8B039700E514BF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		9B17CF071B8B0B9800E514BF /* DataOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataOperation.h; path = "Database Handler/DataOperation.h"; sourceTree = "<group>"; };
+		9B17CF081B8B0B9800E514BF /* DataOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataOperation.m; path = "Database Handler/DataOperation.m"; sourceTree = "<group>"; };
+		9B17CF091B8B0B9800E514BF /* DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataStore.h; path = "Database Handler/DataStore.h"; sourceTree = "<group>"; };
+		9B17CF0A1B8B0B9800E514BF /* DataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataStore.m; path = "Database Handler/DataStore.m"; sourceTree = "<group>"; };
 		9BCE0DBC1B8729BF0034E265 /* WebServiceEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebServiceEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BCE0DC01B8729BF0034E265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BCE0DC11B8729BF0034E265 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +49,8 @@
 		9BCE0DD51B8729C00034E265 /* WebServiceExTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebServiceExTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BCE0DDA1B8729C00034E265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BCE0DDB1B8729C00034E265 /* WebServiceExTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebServiceExTests.m; sourceTree = "<group>"; };
+		9BCE0DE61B872A050034E265 /* ServerHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerHandler.h; path = "Server Handler/ServerHandler.h"; sourceTree = "<group>"; };
+		9BCE0DE71B872A050034E265 /* ServerHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerHandler.m; path = "Server Handler/ServerHandler.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B17CF051B8B039700E514BF /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,9 +72,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B17CF061B8B0B8400E514BF /* Database Handler */ = {
+			isa = PBXGroup;
+			children = (
+				9B17CF071B8B0B9800E514BF /* DataOperation.h */,
+				9B17CF081B8B0B9800E514BF /* DataOperation.m */,
+				9B17CF091B8B0B9800E514BF /* DataStore.h */,
+				9B17CF0A1B8B0B9800E514BF /* DataStore.m */,
+			);
+			name = "Database Handler";
+			sourceTree = "<group>";
+		};
 		9BCE0DB31B8729BF0034E265 = {
 			isa = PBXGroup;
 			children = (
+				9B17CF041B8B039700E514BF /* libsqlite3.dylib */,
 				9BCE0DBE1B8729BF0034E265 /* WebServiceEx */,
 				9BCE0DD81B8729C00034E265 /* WebServiceExTests */,
 				9BCE0DBD1B8729BF0034E265 /* Products */,
@@ -81,6 +105,8 @@
 		9BCE0DBE1B8729BF0034E265 /* WebServiceEx */ = {
 			isa = PBXGroup;
 			children = (
+				9B17CF061B8B0B8400E514BF /* Database Handler */,
+				9BCE0DE51B8729EA0034E265 /* Server Handler */,
 				9BCE0DC31B8729BF0034E265 /* AppDelegate.h */,
 				9BCE0DC41B8729BF0034E265 /* AppDelegate.m */,
 				9BCE0DC61B8729BF0034E265 /* ViewController.h */,
@@ -117,6 +143,15 @@
 				9BCE0DDA1B8729C00034E265 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9BCE0DE51B8729EA0034E265 /* Server Handler */ = {
+			isa = PBXGroup;
+			children = (
+				9BCE0DE61B872A050034E265 /* ServerHandler.h */,
+				9BCE0DE71B872A050034E265 /* ServerHandler.m */,
+			);
+			name = "Server Handler";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +257,9 @@
 				9BCE0DC81B8729BF0034E265 /* ViewController.m in Sources */,
 				9BCE0DC51B8729BF0034E265 /* AppDelegate.m in Sources */,
 				9BCE0DC21B8729BF0034E265 /* main.m in Sources */,
+				9B17CF0B1B8B0B9800E514BF /* DataOperation.m in Sources */,
+				9BCE0DE81B872A050034E265 /* ServerHandler.m in Sources */,
+				9B17CF0C1B8B0B9800E514BF /* DataStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +456,7 @@
 				9BCE0DE11B8729C00034E265 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BCE0DE21B8729C00034E265 /* Build configuration list for PBXNativeTarget "WebServiceExTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +465,7 @@
 				9BCE0DE41B8729C00034E265 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
